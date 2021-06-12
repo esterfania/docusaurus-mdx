@@ -84,7 +84,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebars.ts"),
           // Please change this to your repo.
           editUrl: "https://github.com/esterfania/docusaurus-mdx/tree/main/",
         },
