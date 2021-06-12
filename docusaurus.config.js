@@ -9,7 +9,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "esterfania", // Usually your GitHub org/user name.
   projectName: "docusaurus-mdx", // Usually your repo name.
-  plugins: [],
+  plugins: ["docusaurus-plugin-sass"],
   themes: [],
   themeConfig: {
     navbar: {
@@ -97,7 +97,7 @@ module.exports = {
           editUrl: "https://github.com/esterfania/docusaurus-mdx/tree/main/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       },
     ],
