@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Docs",
-  tagline: "Dinosaurs are cool",
+  tagline: "A tutorial to MDX",
   url: "https://esterfania.github.io/docusaurus-mdx",
   baseUrl: "/docusaurus-mdx/",
   onBrokenLinks: "throw",
