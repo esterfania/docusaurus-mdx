@@ -303,3 +303,83 @@ With the above, the <code>Heading</code> component will be rendered for any <cod
 In addition to HTML elements, there is one special mapping: <code>inlineCode</code> can be used for code inside paragraphs, tables, etc.
 
 See the [Table of components](/docs/table-of-components) for supported names.
+
+## MDXProvider
+
+If you’re using an app layout that wraps your application, you can use the <code>MDXProvider</code> to only pass your components in one place:
+
+```jsx title="src/App.js"
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+
+import { Heading, Text, Pre, Code, Table } from "./components";
+
+const components = {
+  h1: Heading.H1,
+  h2: Heading.H2,
+  // …
+  p: Text,
+  code: Pre,
+  inlineCode: Code,
+};
+
+export default (props) => (
+  <MDXProvider components={components}>
+    <main {...props} />
+  </MDXProvider>
+);
+```
+
+This allows you to remove duplicated component passing and importing.
+It will typically go in layout files.
+
+### Using the wrapper
+
+The MDXProvider has a special <code>wrapper</code> key that you can use in the component mapping.
+With your wrapper component you can set the layout of your document, inject styling, or even manipulate the children passed to the component.
+
+```jsx title="src/App.js"
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+
+const Wrapper = (props) => (
+  <main style={{ padding: "20px", backgroundColor: "tomato" }} {...props} />
+);
+
+export default ({ children }) => (
+  <MDXProvider components={{ wrapper: Wrapper }}>{children}</MDXProvider>
+);
+```
+
+### Default exports
+
+Sometimes from an MDX file you might want to override the wrapper. This is
+especially useful when you want to override layout for a single entry point at
+the page level. To achieve this you can use the ES default export and it will
+wrap your MDX document instead of the wrapper passed to MDXProvider.
+
+You can declare a default export as a function:
+
+```jsx
+import Layout from "./Layout";
+
+export default ({ children }) => <Layout some="metadata">{children}</Layout>;
+```
+
+```md
+# Hello, world!
+```
+
+Or directly as a component:
+
+```jsx
+import Layout from "./Layout";
+
+export default Layout;
+```
+
+```md
+# Hello, world!
+```
+
+Either works. Whatever you prefer!
