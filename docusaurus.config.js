@@ -1,17 +1,22 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Docs",
+  title: "Docs - Tutorial to MDX",
   tagline: "A tutorial to MDX",
   url: "https://esterfania.github.io/docusaurus-mdx",
   baseUrl: "/docusaurus-mdx/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "error",
+  onBrokenMarkdownLinks: "error",
+  onDuplicateRoutes: "error",
   favicon: "img/favicon.ico",
   organizationName: "esterfania", // Usually your GitHub org/user name.
   projectName: "docusaurus-mdx", // Usually your repo name.
   plugins: ["docusaurus-plugin-sass"],
   themes: [],
   themeConfig: {
+    hideableSidebar: true,
+    colorMode: {
+      defaultMode: "dark",
+    },
     navbar: {
       title: "Docs",
       logo: {
@@ -34,7 +39,6 @@ module.exports = {
       ],
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
