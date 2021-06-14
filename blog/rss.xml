@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Docs Blog</title>
+        <title>Docs - Tutorial to MDX Blog</title>
         <link>https://esterfania.github.io/docusaurus-mdx/blog</link>
-        <description>Docs Blog</description>
+        <description>Docs - Tutorial to MDX Blog</description>
         <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>

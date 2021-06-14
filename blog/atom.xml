@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://esterfania.github.io/docusaurus-mdx/blog</id>
-    <title>Docs Blog</title>
+    <title>Docs - Tutorial to MDX Blog</title>
     <updated>2019-05-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://esterfania.github.io/docusaurus-mdx/blog"/>
-    <subtitle>Docs Blog</subtitle>
+    <subtitle>Docs - Tutorial to MDX Blog</subtitle>
     <icon>https://esterfania.github.io/docusaurus-mdx/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
